@@ -6,8 +6,8 @@ ltmain.sh
 missing
 depcomp
 aclocal.m4
-m4/
-autom4te.cache/
+m4
+autom4te.cache
 config.*
 *.kdevelop.pcs
 *.kdevses

@@ -6,3 +6,9 @@ all:
 	libtoolize -c -f
 	automake -afc
 	autoconf
+
+mrproper:
+	-@make distclean
+	@for file in $(shell cat .gitignore); do \
+	  find . -name $$file -print -exec rm -rf {} \;; \
+	done
