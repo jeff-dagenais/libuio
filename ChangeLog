@@ -1,4 +1,129 @@
-2010-03-05  Stephan Linz  <linz@li-pro.net>
+commit acea241e09f261a3190c7dfa6cae33a4ccc287a5
+Author: Stephan Linz <slz@users.sourceforge.net>
+Date:	Wed Mar 16 00:31:06 2011 +0100
 
-	* libuio: initial version.
+    Prepare release 0.2.1
 
+    Signed-off-by: Stephan Linz <slz@users.sourceforge.net>
+
+commit 50b6f79885ac4a9c15b27b5fce880fe9541ca159
+Author: Stephan Linz <slz@users.sourceforge.net>
+Date:	Wed Mar 16 00:23:46 2011 +0100
+
+    hold on tools/system.h to EXTRA_DIST
+
+    Signed-off-by: Stephan Linz <slz@users.sourceforge.net>
+
+commit d2305c2716ae6114d2c44745403ce02dc9412369
+Author: Stephan Linz <slz@users.sourceforge.net>
+Date:	Wed Mar 16 00:09:44 2011 +0100
+
+    hold on src/libtool-version to EXTRA_DIST
+
+    Signed-off-by: Stephan Linz <slz@users.sourceforge.net>
+
+commit 721c0592dc7af4a66d56ac91598c7bbb69b4c594
+Author: Stephan Linz <slz@users.sourceforge.net>
+Date:	Tue Mar 15 23:57:31 2011 +0100
+
+    add uninstalled pkg-config file
+
+    Signed-off-by: Stephan Linz <slz@users.sourceforge.net>
+
+commit 472d58b23e8e06e3781b09a8e6831bbedf31a0eb
+Author: Stephan Linz <slz@users.sourceforge.net>
+Date:	Tue Mar 15 23:46:46 2011 +0100
+
+    add pkg-config file installation
+
+    Signed-off-by: Stephan Linz <slz@users.sourceforge.net>
+
+commit ec861d25c6bea78ca890887a3bca5c71c8300309
+Author: Stephan Linz <slz@users.sourceforge.net>
+Date:	Tue Mar 15 23:39:34 2011 +0100
+
+    add release system with Git support
+
+    use a separated make target 'release'
+
+    Signed-off-by: Stephan Linz <slz@users.sourceforge.net>
+
+commit bc1ed374a81f479c658ec663042453ddd07d294c
+Author: Stephan Linz <slz@users.sourceforge.net>
+Date:	Tue Mar 15 23:33:52 2011 +0100
+
+    adapt to Kdevelop 3.5 on Ubuntu 9.04
+
+    Signed-off-by: Stephan Linz <slz@users.sourceforge.net>
+
+commit 7b6a760ce2582263ed6d206b5844d55ad63f3cde
+Author: Stephan Linz <slz@users.sourceforge.net>
+Date:	Tue Mar 15 23:31:44 2011 +0100
+
+    hold on TODO to 64bit related warnings
+
+    Signed-off-by: Stephan Linz <slz@users.sourceforge.net>
+
+commit 37b8ecf34a451b25f9d8787b9fc24ccfeb891c87
+Author: Stephan Linz <slz@users.sourceforge.net>
+Date:	Tue Mar 15 23:26:37 2011 +0100
+
+    avoid compiler warning on memset
+
+    Signed-off-by: Stephan Linz <slz@users.sourceforge.net>
+
+commit b086839a6ad19e04f864a56aa9f5279704aecac4
+Author: Stephan Linz <slz@users.sourceforge.net>
+Date:	Tue Mar 15 23:22:00 2011 +0100
+
+    add pkg-config file
+
+    Signed-off-by: Stephan Linz <slz@users.sourceforge.net>
+
+commit 94f197a4fe71ddf0caa8b6a0aa8d5e9c28573b1b
+Author: Stephan Linz <slz@users.sourceforge.net>
+Date:	Tue Mar 15 23:20:35 2011 +0100
+
+    make git more relaxed with kdevelop build
+
+    Signed-off-by: Stephan Linz <slz@users.sourceforge.net>
+
+commit 8c74a59e5fd14b64681e388b7e9e5637cce3af3b
+Author: Stephan Linz <slz@users.sourceforge.net>
+Date:	Tue Mar 15 23:06:17 2011 +0100
+
+    replace virgin make by autogen.sh
+
+    Signed-off-by: Stephan Linz <slz@users.sourceforge.net>
+
+commit 46a05241b2d40bc7de7e00fb8c45659d5c040dcd
+Author: Stephan Linz <slz@users.sourceforge.net>
+Date:	Tue Mar 15 23:04:47 2011 +0100
+
+    replace obsolete autotools macros
+
+    Signed-off-by: Stephan Linz <slz@users.sourceforge.net>
+
+commit f1fdba5a64206e15623915db3d8432b569ba165b
+Author: Stephan Linz <slz@users.sourceforge.net>
+Date:	Sat Mar 6 16:00:38 2010 +0100
+
+    virgin make: target mrproper established
+
+    Signed-off-by: Stephan Linz <slz@users.sourceforge.net>
+
+commit 1a88b29bc40fa60163aec42b2eec3cff65c96ca9
+Author: Stephan Linz <slz@users.sourceforge.net>
+Date:	Sat Mar 6 15:19:05 2010 +0100
+
+    make git more relaxed with non virgin source tree
+
+    Signed-off-by: Stephan Linz <slz@users.sourceforge.net>
+
+commit 20d4b89e861334a3d322e3807dc5445d214b102e
+Author: Stephan Linz <slz@users.sourceforge.net>
+Date:	Fri Mar 5 21:07:49 2010 +0100
+
+    libuio: initial import
+
+    Signed-off-by: Stephan Linz <slz@users.sourceforge.net>

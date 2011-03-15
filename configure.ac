@@ -2,7 +2,7 @@
 
 AC_PREREQ(2.59)
 AC_INIT([UIO Device Access Library],
-	[0.2.1-devel],
+	[0.2.1],
 	[libuio-bug@li-pro.net],
 	[libuio],
 	[http://sourceforge.net/projects/libuio/])
