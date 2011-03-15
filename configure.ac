@@ -27,6 +27,7 @@ AC_PROG_INSTALL
 AC_CONFIG_FILES([
 	Makefile
 	libuio.pc
+	libuio-uninstalled.pc
 	src/Makefile
 	tools/Makefile
 ])
