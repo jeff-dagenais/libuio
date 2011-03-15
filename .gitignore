@@ -4,6 +4,9 @@ configure
 install-sh
 ltmain.sh
 missing
+debug
+default
+optimized
 depcomp
 aclocal.m4
 m4
