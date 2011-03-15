@@ -1,3 +1,4 @@
 src:	make uio_helper.h C++ save
 tools:	write man page for rwuio
 tools:	expand Makefile.am to install man pages
+all:	comply on 64bit (fix warnings in printf)
