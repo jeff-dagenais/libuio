@@ -1,4 +1,4 @@
-INCLUDES = -I$(top_srcdir)/src
+AM_CPPFLAGS = -I$(top_srcdir)/src
 METASOURCES = AUTO
 bin_PROGRAMS = lsuio rwuio
 lsuio_SOURCES = lsuio.c

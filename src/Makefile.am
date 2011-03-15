@@ -1,4 +1,4 @@
-INCLUDES =
+AM_CPPFLAGS =
 METASOURCES = AUTO
 lib_LTLIBRARIES = libuio.la
 noinst_DATA = libtool-version
