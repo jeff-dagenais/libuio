@@ -60,7 +60,7 @@ int opt_accessbits;
 int uio_filter;
 int uio_map;
 unsigned int uio_offset;
-unsigned int uio_value;
+unsigned long long uio_value;
 
 static int decode_switches (int argc, char **argv);
 static void uio_read(struct uio_info_t *info);
@@ -132,8 +132,8 @@ static void uio_read(struct uio_info_t *info)
 	if (uio_is_mapped(info))
 		switch (opt_accessbits) {
 			case 8:
-				fprintf(stderr,
-					"64 bit access not yet implemented\n");
+				printf("%08lx: %08llx\n", addr,
+				       *(volatile unsigned long long*)(vp));
 			break;
 			case 4:
 				printf("%08lx: %08x\n", addr,
@@ -160,21 +160,21 @@ static void uio_write(struct uio_info_t *info)
 	if (uio_is_mapped(info))
 		switch (opt_accessbits) {
 			case 8:
-				fprintf(stderr,
-					"64 bit access not yet implemented\n");
+				*(volatile unsigned long long*)(vp) = uio_value;
+				printf("%08lx: %016llx\n", addr, uio_value);
 				break;
 			case 4:
-				*(volatile unsigned long*)(vp) = uio_value;
-				printf("%08lx: %08x\n", addr, uio_value);
+				*(volatile unsigned int*)(vp) = uio_value;
+				printf("%08lx: %08x\n", addr, (unsigned int)uio_value);
 				break;
 			case 2:
 				*(volatile unsigned short*)(vp) = uio_value;
-				printf("%08lx: %04x\n", addr, uio_value);
+				printf("%08lx: %04x\n", addr, (unsigned short)uio_value);
 				break;
 			case 1:
 			default:
 				*(volatile unsigned char*)(vp) = uio_value;
-				printf("%08lx: %02x\n", addr, uio_value);
+				printf("%08lx: %02x\n", addr, (unsigned char)uio_value);
 				break;
 		}
 
@@ -219,7 +219,7 @@ static int decode_switches (int argc, char **argv)
 			break;
 			case 'w' : opt_read = 0; opt_write = 1;
 			uio_offset = strtoul(optarg, &pc, 0);
-			if (*pc++==':') uio_value = strtoul(pc, NULL, 0);
+			if (*pc++==':') uio_value = strtoull(pc, NULL, 0);
 			break;
 			case 'u' : opt_uiodev = 1;
 			uio_filter = atoi(optarg);
