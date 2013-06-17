@@ -59,7 +59,7 @@ int opt_accessbits;
 
 int uio_filter;
 int uio_map;
-unsigned int uio_offset;
+long uio_offset;
 unsigned long long uio_value;
 
 static int decode_switches (int argc, char **argv);
@@ -73,6 +73,10 @@ int main (int argc, char **argv)
 	program_name = argv[0];
 
 	decode_switches (argc, argv);
+	if (uio_offset < 0) {
+		fprintf(stderr, "Negative offsets are not supported.\n");
+		usage (-EINVAL);
+	}
 
 	if (opt_help)
 		usage(0);
@@ -215,10 +219,10 @@ static int decode_switches (int argc, char **argv)
 			case 'm' : uio_map = atoi(optarg);
 			break;
 			case 'r' : opt_read = 1; opt_write = 0;
-			uio_offset = strtoul(optarg, NULL, 0);
+			uio_offset = strtol(optarg, NULL, 0);
 			break;
 			case 'w' : opt_read = 0; opt_write = 1;
-			uio_offset = strtoul(optarg, &pc, 0);
+			uio_offset = strtol(optarg, &pc, 0);
 			if (*pc++==':') uio_value = strtoull(pc, NULL, 0);
 			break;
 			case 'u' : opt_uiodev = 1;
