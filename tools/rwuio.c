@@ -137,7 +137,7 @@ static void uio_read(struct uio_info_t *info)
 			break;
 			case 4:
 				printf("%08lx: %08x\n", addr,
-				       *(volatile unsigned long*)(vp));
+				       *(volatile unsigned int*)(vp));
 			break;
 			case 2:
 				printf("%08lx: %04x\n", addr,
