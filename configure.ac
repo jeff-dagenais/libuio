@@ -1,6 +1,6 @@
 # use autogen.sh
 
-AC_PREREQ(2.59)
+AC_PREREQ(2.65)
 AC_INIT([UIO Device Access Library],
 	[0.2.2-devel],
 	[libuio-bug@li-pro.net],
@@ -21,7 +21,7 @@ AC_LANG([C])
 AC_REQUIRE_CPP
 
 LT_PREREQ([2.2])
-AC_PROG_LIBTOOL
+LT_INIT
 AC_PROG_INSTALL
 
 AC_CONFIG_FILES([
