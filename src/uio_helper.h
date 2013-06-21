@@ -76,6 +76,7 @@ int uio_get_all_info(struct uio_info_t* info);
 int uio_get_device_attributes(struct uio_info_t* info);
 
 void* uio_single_mmap(struct uio_info_t* info, int map_num, int fd);
+void* uio_single_mmap_ro(struct uio_info_t* info, int map_num, int fd);
 inline void uio_mmap(struct uio_info_t* info, int fd);
 
 inline void uio_single_munmap(struct uio_info_t* info, int map_num);
