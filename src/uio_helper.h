@@ -61,11 +61,11 @@ struct uio_info_t {
 
 /* function prototypes */
 
-inline char* uio_lib_name(void);
-inline char* uio_lib_version(void);
-inline int uio_lib_ifcurrent(void);
-inline int uio_lib_ifrevision(void);
-inline int uio_lib_ifage(void);
+char* uio_lib_name(void);
+char* uio_lib_version(void);
+int uio_lib_ifcurrent(void);
+int uio_lib_ifrevision(void);
+int uio_lib_ifage(void);
 
 int uio_get_mem_size(struct uio_info_t* info, int map_num);
 int uio_get_mem_addr(struct uio_info_t* info, int map_num);
@@ -76,10 +76,10 @@ int uio_get_all_info(struct uio_info_t* info);
 int uio_get_device_attributes(struct uio_info_t* info);
 
 void* uio_single_mmap(struct uio_info_t* info, int map_num, int fd);
-inline void uio_mmap(struct uio_info_t* info, int fd);
+void uio_mmap(struct uio_info_t* info, int fd);
 
-inline void uio_single_munmap(struct uio_info_t* info, int map_num);
-inline void uio_munmap(struct uio_info_t* info);
+void uio_single_munmap(struct uio_info_t* info, int map_num);
+void uio_munmap(struct uio_info_t* info);
 
 void uio_free_dev_attrs(struct uio_info_t* info);
 void uio_free_info(struct uio_info_t* info);

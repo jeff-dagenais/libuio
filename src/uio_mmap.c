@@ -23,7 +23,7 @@
 
 #include "uio_helper.h"
 
-inline void uio_mmap(struct uio_info_t* info, int fd)
+void uio_mmap(struct uio_info_t* info, int fd)
 {
 	int map_num;
 	if (!fd) return;
